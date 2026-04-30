@@ -1,10 +1,11 @@
 # Sort Visualization
 
 Kleines Rust-Tool, das Sortieralgorithmen in einer Terminal-UI animiert.
+Zusätzlich gibt es eine gemeinsame GUI-Variante fuer Desktop und Web.
 
 ## Starten
 
-Mit Einstellungsmenue starten:
+Terminal-App mit Einstellungsmenue starten:
 
 ```bash
 cargo run -q
@@ -38,6 +39,24 @@ cargo run -q -- bubble -s 20 -d 80
 cargo run -q -- quick --mode reversed --delay 30
 cargo run -q -- insertion --mode nearly --size 35
 ```
+
+## Desktop-App
+
+```bash
+cargo run -q --bin desktop
+```
+
+## Web-App
+
+Die Web-Variante nutzt WebAssembly. Mit `trunk` kannst du sie lokal starten:
+
+```bash
+cargo install trunk
+rustup target add wasm32-unknown-unknown
+trunk serve index.html --open
+```
+
+Der Web-Einstiegspunkt ist [index.html](index.html), der Rust-Binary-Target ist `web`.
 
 ## Tasten
 

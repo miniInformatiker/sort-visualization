@@ -5,7 +5,7 @@ use std::time::Duration;
 pub const DEFAULT_SIZE: usize = 24;
 pub const DEFAULT_DELAY_MS: u64 = 60;
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Algorithm {
     Bubble,
     Selection,
@@ -46,7 +46,7 @@ impl fmt::Display for Algorithm {
     }
 }
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DataMode {
     Random,
     Reversed,

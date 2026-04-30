@@ -1,6 +1,4 @@
-mod config;
-mod sorting;
-mod tui;
+use sort_visualization::{config, tui};
 
 fn main() {
     match config::read_config() {
