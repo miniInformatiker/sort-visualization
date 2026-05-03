@@ -87,7 +87,6 @@ impl eframe::App for SortGuiApp {
         apply_style(ctx);
         self.update_animation(ctx);
 
-
         egui::TopBottomPanel::top("header")
             .frame(
                 egui::Frame::none()
@@ -104,7 +103,12 @@ impl eframe::App for SortGuiApp {
             .frame(
                 egui::Frame::none()
                     .fill(Color32::from_rgb(12, 15, 20))
-                    .inner_margin(Margin { left: 18.0, right: 8.0, top: 18.0, bottom: 18.0 }),
+                    .inner_margin(Margin {
+                        left: 18.0,
+                        right: 8.0,
+                        top: 18.0,
+                        bottom: 18.0,
+                    }),
             )
             .show(ctx, |ui| {
                 draw_settings(ui, self);
@@ -114,7 +118,12 @@ impl eframe::App for SortGuiApp {
             .frame(
                 egui::Frame::none()
                     .fill(Color32::from_rgb(12, 15, 20))
-                    .inner_margin(Margin { left: 8.0, right: 18.0, top: 18.0, bottom: 18.0 }),
+                    .inner_margin(Margin {
+                        left: 8.0,
+                        right: 18.0,
+                        top: 18.0,
+                        bottom: 18.0,
+                    }),
             )
             .show(ctx, |ui| {
                 draw_visualization(ui, self);
